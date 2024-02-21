@@ -16,6 +16,11 @@ int main()
     list.push_back(node_3 -> m_data);
 
     list.show();
+    cout << "-------DELETE--------" << endl;
+    list.deleteNodePos(1);
+    list.show();
+
+
 
     delete node_0;
     delete node_1;

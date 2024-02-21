@@ -74,3 +74,61 @@ void List :: show()
     }
 
 }
+
+// удаление узла по даным узла
+void List :: deleteNodeData(int data)
+{
+    Node* temp = m_head;
+    Node* prev = nullptr;
+
+    // случай удаления начала списка
+    if(temp && temp -> m_data == data){
+        m_head = temp -> m_next;
+        delete temp;
+        return;
+    }
+    // идем по списку, пока не найдем узел со значением данных, равных ключу
+    while(temp && temp -> m_data != data)
+    {
+        prev = temp;
+        temp = temp -> m_next;
+    }
+    // если узел не найден, возвращаем
+    if(!temp)
+    {
+        return;
+    }
+    // меняем указатель следующего узла для предыдущего узла на узел, следующий за удаляемым узлом, и удаляем узел с данными
+    prev -> m_next = temp -> m_next;
+    delete temp;
+
+}
+// удаление узла по позиции в списке
+void List :: deleteNodePos(int pos)
+{
+    Node* temp = m_head;
+    Node* prev = nullptr;
+
+    // случай удаления начала списка
+    if(temp && pos == 0){
+        m_head = temp -> m_next;
+        delete temp;
+        return;
+    }
+
+    int currPos = 0;
+    while(temp != 0)
+    {
+        if(currPos == pos)
+        {
+            
+            prev->m_next = temp->m_next;
+            delete temp;
+            return;
+        }
+        prev = temp;
+        temp = temp -> m_next;
+        currPos++;
+    }
+    
+}
