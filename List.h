@@ -11,6 +11,7 @@ public:
     void show();
     void deleteNodeData(int data);
     void deleteNodePos(int pos);
+    void clear();
 private:
     Node* m_head;
 };

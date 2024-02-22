@@ -17,15 +17,16 @@ int main()
 
     list.show();
     cout << "-------DELETE--------" << endl;
-    list.deleteNodePos(1);
+    //list.deleteNodePos(1);
+    //list.show();
+    list.clear();
     list.show();
 
-
-
+    /*
     delete node_0;
     delete node_1;
     delete node_2;
     delete node_3;
-
+    */
     return 0;
 }

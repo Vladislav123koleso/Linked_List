@@ -121,7 +121,6 @@ void List :: deleteNodePos(int pos)
     {
         if(currPos == pos)
         {
-            
             prev->m_next = temp->m_next;
             delete temp;
             return;
@@ -132,3 +131,16 @@ void List :: deleteNodePos(int pos)
     }
     
 }
+// полная очистка списка
+void List :: clear()
+{
+    Node* temp = m_head;
+
+    while(temp != 0)
+    {
+        m_head = temp -> m_next;
+        delete temp;
+        temp = m_head;
+    }
+}
+
