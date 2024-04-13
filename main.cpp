@@ -1,5 +1,6 @@
 #include <iostream>
 #include "cpp/List.cpp"
+#include "cpp/Stack.cpp"
 #include "cpp/BinarySearch.cpp"
 
 using namespace std;
@@ -18,17 +19,14 @@ int main()
     list.push_back(node_3 -> m_data);
 
     int arr[] = {0,1,2,3,4};
-    cout << BinarySearch(arr, 0,4,3) << endl;
+    //cout << BinarySearch(arr, 0,4,3) << endl;
 
-
-    /*
-    list.show();
-    cout << "-------DELETE--------" << endl;
-    cout << list.find(10) << endl;
-    list.clear();
-    list.show();
-    */
-    
+    Stack stack;
+    stack.push(10);
+    stack.push(11);
+    stack.push(12);
+    stack.push(13);
+    cout << stack.peek();
 
     return 0;
 }

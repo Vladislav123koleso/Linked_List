@@ -1,11 +1,11 @@
-#include "Stack.h"
+#include "../header/Stack.h"
 
 
-bool Stack :: isFull()
+bool Stack :: isEmpty()
 {
     return m_top < 0;
 }
-bool Stack :: isEmpty()
+bool Stack :: isFull()
 {
     return m_top >= (MAX -1);
 }
